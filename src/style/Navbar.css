@@ -1,0 +1,361 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 0;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    position: relative;
+    z-index: 2;
+}
+
+.logo img {
+    height: 45px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.desktop-nav {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.nav-item {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-item:hover::before,
+.nav-item.active::before {
+    width: 100%;
+}
+
+.nav-item.active {
+    color: #6366f1;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.search-icon {
+    font-size: 1.3rem;
+    color: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-icon:hover {
+    color: #6366f1;
+    transform: translateY(-2px);
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    color: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 6rem 2rem 2rem;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-nav-item {
+    padding: 1rem 0;
+    color: #e2e8f0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-item.active {
+    color: #6366f1;
+    padding-left: 1rem;
+}
+
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 100px;
+    z-index: 1001;
+}
+
+.search-container {
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+}
+
+.search-input-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.search-input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6366f1;
+    font-size: 1.2rem;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 1.2rem 3rem;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+}
+
+.search-container input::placeholder {
+    color: rgba(226, 232, 240, 0.6);
+}
+
+.close-search {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #e2e8f0;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.close-search:hover {
+    color: #6366f1;
+}
+
+.search-results {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    max-height: calc(100vh - 250px);
+    overflow-y: auto;
+}
+
+.result-category {
+    padding: 1rem;
+}
+
+.result-category h3 {
+    color: #6366f1;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+    padding: 0 0.5rem;
+}
+
+.search-result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.search-result-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.result-title {
+    color: #e2e8f0;
+    font-size: 1.1rem;
+}
+
+.result-type {
+    color: rgba(226, 232, 240, 0.6);
+    font-size: 0.9rem;
+    padding: 0.2rem 0.6rem;
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: 12px;
+}
+
+.no-results {
+    text-align: center;
+    color: #e2e8f0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+/* Scrollbar Styles for Search Results */
+.search-results::-webkit-scrollbar {
+    width: 8px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.5);
+    border-radius: 4px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .nav-content {
+        padding: 0 1.5rem;
+    }
+
+    .desktop-nav {
+        gap: 2rem;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .nav-icons {
+        gap: 1.2rem;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .search-icon {
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .search-container {
+        width: 95%;
+    }
+
+    .search-container input {
+        font-size: 1.1rem;
+        padding: 1rem 2.8rem;
+    }
+
+    .result-title {
+        font-size: 1rem;
+    }
+
+    .result-type {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-content {
+        padding: 0 1rem;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .nav-icons {
+        gap: 1.2rem;
+    }
+
+    .mobile-nav {
+        width: 100%;
+    }
+
+    .search-overlay {
+        padding-top: 80px;
+    }
+
+    .search-container input {
+        font-size: 1rem;
+        padding: 0.8rem 2.5rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .navbar.scrolled {
+        background: rgba(15, 23, 42, 0.85);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,175 @@
+.terms-page {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .terms-hero {
+        background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+        color: white;
+        text-align: center;
+        padding: 8rem 2rem 6rem;
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+    }
+
+    .terms-intro {
+        padding: 4rem 0;
+        background: white;
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+
+            h2 {
+                font-size: 2.5rem;
+                color: #1a1a1a;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                color: #666;
+                line-height: 1.8;
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .terms-sections {
+        padding: 4rem 0;
+        background: #f8f9ff;
+
+        .terms-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            .card-header {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+
+                .section-icon {
+                    font-size: 2rem;
+                    color: #6366f1;
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                    color: #1a1a1a;
+                }
+            }
+
+            .card-content {
+                color: #666;
+                line-height: 1.8;
+
+                p {
+                    margin-bottom: 1rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .terms-footer {
+        padding: 4rem 0;
+        background: #1a1a1a;
+        color: white;
+        text-align: center;
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+
+            h2 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+                opacity: 0.9;
+                margin-bottom: 2rem;
+            }
+
+            .contact-btn {
+                background: #6366f1;
+                color: white;
+                border: none;
+                padding: 1rem 2rem;
+                border-radius: 30px;
+                font-size: 1.1rem;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: #4f46e5;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .terms-hero {
+            padding: 6rem 1rem 4rem;
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .terms-intro {
+            padding: 3rem 0;
+
+            .intro-content {
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .terms-sections {
+            .terms-card {
+                padding: 1.5rem;
+
+                .card-header {
+                    .section-icon {
+                        font-size: 1.5rem;
+                    }
+
+                    h3 {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+
+        .terms-footer {
+            padding: 3rem 0;
+
+            .footer-content {
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}

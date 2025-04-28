@@ -1,0 +1,81 @@
+{
+    "success": true,
+    "data": [
+        {
+            "id": "CS001",
+            "title": "Fitness Tracking App",
+            "slug": "fitness-app",
+            "category": "Mobile Development",
+            "description": "We developed a comprehensive fitness tracking app that helped a health company increase user engagement by 60%.",
+            "image": "/placeholder.svg?height=720&width=1280",
+            "alt": "Fitness Tracking App",
+            "technologies": [
+                "React Native",
+                "Firebase",
+                "Redux"
+            ],
+            "results": [
+                "60% increase in user engagement",
+                "40% reduction in app crashes",
+                "25% increase in daily active users"
+            ]
+        },
+        {
+            "id": "CS002",
+            "title": "Healthcare App",
+            "slug": "healthcare-app",
+            "category": "Mobile Development",
+            "description": "We built a mobile healthcare application that streamlined patient management and reduced administrative tasks by 40%.",
+            "image": "/placeholder.svg?height=720&width=1280",
+            "alt": "Healthcare App",
+            "technologies": [
+                "Flutter",
+                "Firebase",
+                "GraphQL"
+            ],
+            "results": [
+                "40% reduction in administrative tasks",
+                "30% improvement in patient satisfaction",
+                "50% faster appointment scheduling"
+            ]
+        },
+        {
+            "id": "CS003",
+            "title": "Financial Analysis Tool",
+            "slug": "financial-tool",
+            "category": "Desktop Development",
+            "description": "A powerful desktop application for financial data analysis, forecasting, and reporting that helped a financial firm increase efficiency by 45%.",
+            "image": "/placeholder.svg?height=720&width=1280",
+            "alt": "Financial Analysis Tool",
+            "technologies": [
+                "C#",
+                ".NET",
+                "SQL Server"
+            ],
+            "results": [
+                "45% increase in operational efficiency",
+                "30% reduction in reporting time",
+                "25% improvement in data accuracy"
+            ]
+        },
+        {
+            "id": "CS004",
+            "title": "Inventory Management",
+            "slug": "inventory-system",
+            "category": "Desktop Development",
+            "description": "A robust desktop application for managing inventory, tracking sales, and generating reports that reduced inventory costs by 35%.",
+            "image": "/placeholder.svg?height=720&width=1280",
+            "alt": "Inventory Management System",
+            "technologies": [
+                "Electron",
+                "Vue.js",
+                "SQLite"
+            ],
+            "results": [
+                "35% reduction in inventory costs",
+                "50% faster inventory tracking",
+                "40% improvement in order accuracy"
+            ]
+        }
+    ]
+}
