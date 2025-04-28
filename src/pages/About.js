@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 import { FaLinkedinIn, FaTwitter, FaUsers, FaLightbulb, FaHandshake } from 'react-icons/fa';
 import AOS from 'aos';
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import '../style/About.css';
 
 const About = () => {
-    const location = useLocation();
+    const router = useRouter();
 
     useEffect(() => {
         AOS.init({
@@ -17,7 +17,7 @@ const About = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [location]);
+    }, [router.pathname]);
 
     const teamMembers = [
         {
