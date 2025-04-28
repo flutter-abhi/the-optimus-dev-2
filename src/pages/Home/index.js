@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import AOS from 'aos';
 import {
     FaCode, FaMobile, FaPalette, FaCloud, FaRocket, FaChartLine,
@@ -16,8 +16,7 @@ const Home = () => {
     const [text, setText] = useState("");
     const fullText = "Digital d";
     const [isVisible, setIsVisible] = useState(false);
-    const navigate = useNavigate();
-    const location = useLocation();
+    const router = useRouter();
 
     useEffect(() => {
         let currentIndex = 0;
@@ -36,7 +35,7 @@ const Home = () => {
     useEffect(() => {
         setIsVisible(true);
         window.scrollTo(0, 0);
-    }, [location]);
+    }, [router.pathname]);
 
     useEffect(() => {
         AOS.init({
@@ -131,7 +130,7 @@ const Home = () => {
     };
 
     const handleContactClick = () => {
-        navigate('/contact');
+        router.push('/contact');
     };
 
     const ServiceCard = ({ icon: Icon, title, description }) => {
